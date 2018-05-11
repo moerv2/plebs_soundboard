@@ -62,10 +62,10 @@
 document.querySelector('#volume-slider').addEventListener('input',changeVolume);
 
 function changeVolume() {
-	var volume = document.querySelector('#volume-slider');
+	var volume = document.querySelector('#volume-slider').value;
 	var audios = document.querySelectorAll('audio'); 
 	for (var i = 0; i < audios.length; i++) {
-		audios[i].volume = ParseInt(volume*100)/100;
+		audios[i].volume = parseFloat(volume);
 	}
 }
 </script>
