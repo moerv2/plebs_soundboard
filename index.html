@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+ 
+<head>
+ 
+	<title>PLEBS SOUNDBOARD</title>
+ 
+	<!-- JavaScript -->
+	<script type="text/javascript">
+		// Put code here or set the src attribute
+	</script>
+ 
+	<!-- CSS -->
+	<style type="text/css">
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+
+	</style>
+ 
+</head>
+ 
+<body>
+
+<input id="volume-slider" type="range" min="0" max="1" step="0.01" />
+ <center><br><br><br><br><br><br><br>
+ <body background="niggo.jpeg">
+	<audio id="sound1" src="ohooho.mp3"></audio>
+	<audio id="sound2" src="nasenbluten.mp3"></audio>
+	<audio id="sound3" src="fliege.mp3"></audio>
+	<audio id="sound4" src="geh_vorbei.mp3"></audio>
+	<audio id="sound5" src="highping.mp3"></audio>
+	<audio id="sound6" src="auslander.mp3"></audio>
+ 
+	<button class="button" style="height:100px;width:200px" onclick="document.getElementById('sound1').play()">OHOOOHO</button>
+ 	<button class="button" style="height:100px;width:250px" onclick="document.getElementById('sound2').play()">Hab Nasenbluten!</button>
+ 	<button class="button" style="height:100px;width:200px" onclick="document.getElementById('sound3').play()">Die Fliege</button>
+ 	<button class="button" style="height:100px;width:200px" onclick="document.getElementById('sound4').play()">GEH VORBEI</button>
+	<button class="button" style="height:100px;width:200px" onclick="document.getElementById('sound5').play()">Highping</button>
+	<button class="button" style="height:100px;width:200px" onclick="document.getElementById('sound6').play()">Ausländer</button>
+
+	</center>
+<script>
+document.querySelector('#volume-slider').addEventListener('input',changeVolume);
+
+function changeVolume() {
+	var volume = document.querySelector('#volume-slider');
+	var audios = document.querySelectorAll('audio'); 
+	for (var i = 0; i < audios.length; i++) {
+		audios[i].volume = ParseInt(volume*100)/100;
+	}
+}
+</script>
+</body>
+ 
+</html>
