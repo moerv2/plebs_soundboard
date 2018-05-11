@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html>
 <head>
     <meta charset="utf-8">
     <title>PLEBS SOUNDBOARD</title>
@@ -9,47 +9,35 @@
 
 <body background="niggo.jpeg">
 <div>
-    <input id="volume-slider" type="range" min="0.1" max="1" step="0.01"/>
+    <input id="volume-slider" type="range" min="0.1" max="1" step="0.01" title="Volume"/>
 
-    <audio id="sound1" src="audio/ohooho.mp3"></audio>
-    <audio id="sound2" src="audio/nasenbluten.mp3"></audio>
-    <audio id="sound3" src="audio/fliege.mp3"></audio>
-    <audio id="sound4" src="audio/geh_vorbei.mp3"></audio>
-    <audio id="sound5" src="audio/highping.mp3"></audio>
-    <audio id="sound6" src="audio/auslander.mp3"></audio>
-
-    <div style="margin-left:auto;margin-right:auto;width:80vw;" id="main">
-        <button class="button" style="height:100px;width:200px" onclick="document.getElementById('sound1').play()">
+    <div id="main">
+        <button>
+            <audio src="audio/ohooho.mp3"></audio>
             OHOOOHO
         </button>
-        <button class="button" style="height:100px;width:250px" onclick="document.getElementById('sound2').play()">Hab
-            Nasenbluten!
+        <button>
+            <audio src="audio/nasenbluten.mp3"></audio>
+            Hab Nasenbluten!
         </button>
-        <button class="button" style="height:100px;width:200px" onclick="document.getElementById('sound3').play()">Die
-            Fliege
+        <button>
+            <audio src="audio/fliege.mp3"></audio>
+            Die Fliege
         </button>
-        <button class="button" style="height:100px;width:200px" onclick="document.getElementById('sound4').play()">GEH
-            VORBEI
+        <button>
+            <audio src="audio/geh_vorbei.mp3"></audio>
+            GEH VORBEI
         </button>
-        <button class="button" style="height:100px;width:200px" onclick="document.getElementById('sound5').play()">
+        <button>
+            <audio src="audio/highping.mp3"></audio>
             Highping
         </button>
-        <button class="button" style="height:100px;width:200px" onclick="document.getElementById('sound6').play()">
+        <button>
+            <audio src="audio/auslander.mp3"></audio>
             Ausländer
         </button>
     </div>
 </div>
-<script>
-    document.querySelector('#volume-slider').addEventListener('input', changeVolume);
-
-    function changeVolume() {
-        var volume = document.querySelector('#volume-slider').value;
-        var audios = document.querySelectorAll('audio');
-        for (var i = 0; i < audios.length; i++) {
-            audios[i].volume = parseFloat(volume);
-        }
-    }
-</script>
 </body>
 
 </html>
