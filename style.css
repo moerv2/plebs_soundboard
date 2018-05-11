@@ -26,13 +26,13 @@ button:active {
 
 #main {
      margin: 0 auto;
-     width: 50%; 
-	 height: 200px;
+     width: 60em; 
+	 height: 10em;
 	 background-color:grey;
 	 border-radius: 15px;
-	 padding-right: 5px;
-	 padding-left: 20px;
-	 padding-top: 20px;
-	 padding-bottom: 10px;
+	 padding-right: 0.8em;
+	 padding-left: 2em;
+	 padding-top: 1em;
+	 padding-bottom: 3em;
 }
 
