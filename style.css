@@ -25,7 +25,9 @@ button:active {
 }
 
 #main {
+	 margin-top:20px;
      margin: 0 auto;
+	 float: center;
      width: 60em; 
 	 height: 10em;
 	 background-color:grey;
@@ -33,6 +35,13 @@ button:active {
 	 padding-right: 0.8em;
 	 padding-left: 2em;
 	 padding-top: 1em;
-	 padding-bottom: 3em;
+	 padding-bottom: 6em;
+}
+
+
+#slider {
+  padding-top: 1em;
+  width: 10em;
+  margin: 0 auto;
 }
 
