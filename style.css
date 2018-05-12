@@ -1,7 +1,8 @@
 button {
     display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
+    margin: 0.5vw;
+    padding: 1vh 2vw 1vh 2vw;
+    font-size: 1.8em;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -9,9 +10,10 @@ button {
     color: #fff;
     background-color: #4CAF50;
     border: none;
-    border-radius: 10px;
-    box-shadow: 0 9px #999;
-    height: 80px;
+    border-radius: 2vh;
+    box-shadow: 0 9px #191;
+    height: 8vh;
+    text-shadow: rgba(0, 0, 0, 0.2) 1px 1px;
 }
 
 button:hover {
@@ -20,28 +22,36 @@ button:hover {
 
 button:active {
     background-color: #3e8e41;
-    box-shadow: 0 5px #666;
+    box-shadow: 0 5px #060;
     transform: translateY(4px);
 }
 
 #main {
-	 margin-top:20px;
-     margin: 0 auto;
-	 float: center;
-     width: 60em; 
-	 height: 10em;
-	 background-color:grey;
-	 border-radius: 15px;
-	 padding-right: 0.8em;
-	 padding-left: 2em;
-	 padding-top: 1em;
-	 padding-bottom: 6em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 2vh;
 }
-
 
 #slider {
-  padding-top: 1em;
-  width: 10em;
-  margin: 0 auto;
+    padding: 0;
+    margin: 0;
 }
 
+#slider > input {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0;
+    margin: 0;
+    border-radius: 2vh;
+    width: 100%;
+}
+
+#slider > h2 {
+    text-shadow: rgba(0, 0, 0, 0.7) 2px 2px;
+    color: white;
+}
