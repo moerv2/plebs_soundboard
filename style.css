@@ -58,8 +58,7 @@ button:active {
 
 #animate {
     position: relative;
-    border; 1px solid green;
-    background: yellow;
+    border; 1px;
     width: 100px;
     height: 100px;
 }
