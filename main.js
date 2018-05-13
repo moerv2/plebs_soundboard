@@ -27,14 +27,19 @@ window.onload = () => {
 	/* Run once to apply the cached slider-setting */
 	changeVolume();
 
-	/* Marvin Sample Box */
+	/* Moving Kai Box */
 	$(document).ready(function (e) {
 		let width = $(document).width();
+		let img = document.querySelector('#animate').children[0];
+		let imgwidth = img.clientWidth;
+
+		width = width - imgwidth;
 
 		function goRight() {
 			$("#animate").animate({
 				left: width
 			}, 5000, function () {
+				img.style.transform = 'scaleX(-1)';
 				setTimeout(goLeft, 50);
 			});
 		}
@@ -43,6 +48,7 @@ window.onload = () => {
 			$("#animate").animate({
 				left: 0
 			}, 5000, function () {
+				img.style.transform = 'scaleX(1)';
 				setTimeout(goRight, 50);
 			});
 		}
