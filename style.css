@@ -4,8 +4,14 @@
     src: url('./fonts/ComicRelief.ttf') format('embedded-opentype'), /* IE6-IE8 */ url('./fonts/ComicRelief.ttf') format('truetype') /* Safari, Android, iOS */
 }
 
+@font-face {
+    font-family: 'ComicPapyrus';
+    src: url('./fonts/ComicPapyrus.ttf'); /* IE9 Compat Modes */
+    src: url('./fonts/ComicPapyrus.ttf') format('embedded-opentype'), /* IE6-IE8 */ url('./fonts/ComicRelief.ttf') format('truetype') /* Safari, Android, iOS */
+}
+
 * {
-    font-family: 'ComicRelief';
+    font-family: 'ComicPapyrus', sans-serif;
 }
 
 button {
