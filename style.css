@@ -15,7 +15,7 @@
 }
 
 button {
-    display: inline-block;
+    display: inline-flex;
     margin: 0.5vw;
     padding: 1vh 2vw 1vh 2vw;
     font-size: 3vmin;
@@ -55,25 +55,31 @@ button:active {
     border-radius: 2vh;
 }
 
-#slider {
+#options {
     margin-left: auto;
     margin-right: auto;
-    width: 30vw;
-    height: 5vmin;
+    width: 40vw;
+    height: 5vh;
+}
+
+#slider {
+    float: left;
 }
 
 #slider input {
     background-color: rgba(0, 0, 0, 0.7);
-    float: right;
     border-radius: 2vmin;
-    width: 20vw;
-    height: 3vmin;
-
+    width: 10vw;
+    height: 3vh;
 }
 
-#slider label {
-    font-size: 3vmin;
-    line-height: 2.5vmin;
+#checkbox {
+    float: right;
+}
+
+.option label {
+    line-height: 5vh;
+    font-size: 5vh;
     text-shadow: rgba(0, 0, 0, 0.7) 2px 2px;
     color: white;
 }

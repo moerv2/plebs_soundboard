@@ -8,10 +8,24 @@ window.onload = () => {
 	let buttons = document.querySelectorAll('button');
 	buttons.forEach((button) => {
 		button.addEventListener('click', (evt) => {
+			//Check if exclusive
+			let checkbox = document.getElementById('exclusive-checkbox');
+			if (checkbox.checked) stopAllSounds();
+
+			//Play sound
 			let children = evt.target.children;
 			for (let i = 0; i < children.length; i++) if (children.item(i).tagName === 'AUDIO') children.item(i).play();
 		})
 	});
+
+	/* Stop all playing sounds. Call this before starting a sound
+	* */
+	function stopAllSounds() {
+		let audios = document.querySelectorAll('audio');
+		audios.forEach(el => {
+			el.load();
+		});
+	}
 
 	/* Get the value of the volume slider
 	* Apply the value to each <audio> element
