@@ -1,6 +1,6 @@
 window.onload = () => {
 	/* Put the changeVolume function as callback for adjusting the volume slider */
-	document.querySelector('#volume-slider').addEventListener('input', changeVolume);
+	document.getElementById('volume-slider').addEventListener('input', changeVolume);
 
 	/* Gets all the buttons, then iterates through them.
 	* Adds the ability to play any <audio> elements inside of the <button> element
@@ -21,18 +21,18 @@ window.onload = () => {
 	/* Stop all playing sounds. Call this before starting a sound
 	* */
 	function stopAllSounds() {
-		let audios = document.querySelectorAll('audio');
-		audios.forEach(el => {
-			el.load();
-		});
+		let audios = document.getElementsByTagName('audio');
+		for (let i = 0; i < audios.length; i++) {
+			audios[i].load();
+		}
 	}
 
 	/* Get the value of the volume slider
 	* Apply the value to each <audio> element
 	* */
 	function changeVolume() {
-		let volume = document.querySelector('#volume-slider').value;
-		let audios = document.querySelectorAll('audio');
+		let volume = document.getElementById('volume-slider').value;
+		let audios = document.getElementsByTagName('audio');
 		for (let i = 0; i < audios.length; i++) {
 			audios[i].volume = parseFloat(volume);
 		}
@@ -44,7 +44,7 @@ window.onload = () => {
 	/* Moving Kai Box */
 	$(document).ready(function (e) {
 		let width = $(document).width();
-		let img = document.querySelector('#animate').children[0];
+		let img = document.getElementById('animate').children[0];
 		let imgwidth = img.clientWidth + 20;
 
 		width = width - imgwidth;
@@ -76,14 +76,23 @@ window.onload = () => {
 		let offset = body.style.backgroundPositionY.replace('px', '');
 		if (offset < 168) {
 			offset++;
+			offset++;
 		} else {
 			offset = 0;
 		}
 		body.style.backgroundPositionY = offset + 'px';
-		setTimeout(moveBackground, 16);
+		setTimeout(moveBackground, 32);
 	}
 
 	moveBackground();
 
+	/* Cursor FX
+	* */
+
+	let cursor = document.getElementById('cursor');
+	document.addEventListener('mousemove', (evt) => {
+		cursor.style.left = evt.clientX + 'px';
+		cursor.style.top = evt.clientY + 'px';
+	}, false);
 };
 
