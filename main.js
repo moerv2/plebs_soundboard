@@ -76,23 +76,27 @@ window.onload = () => {
 		let offset = body.style.backgroundPositionY.replace('px', '');
 		if (offset < 168) {
 			offset++;
-			offset++;
 		} else {
 			offset = 0;
 		}
 		body.style.backgroundPositionY = offset + 'px';
-		setTimeout(moveBackground, 32);
 	}
-
-	moveBackground();
 
 	/* Cursor FX
 	* */
-
 	let cursor = document.getElementById('cursor');
 	document.addEventListener('mousemove', (evt) => {
 		cursor.style.left = evt.clientX + 'px';
 		cursor.style.top = evt.clientY + 'px';
 	}, false);
+
+	/* Draw Loop - damit so schnell gerendert wird wie geht
+	* */
+	function loop() {
+		moveBackground();
+		requestAnimationFrame(loop);
+	}
+
+	loop();
 };
 

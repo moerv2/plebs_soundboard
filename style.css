@@ -15,6 +15,10 @@
     cursor: none;
 }
 
+body {
+    overflow: hidden;
+}
+
 button {
     margin: 0.5vw;
     padding: 1vh 2vw 1vh 2vw;
@@ -43,6 +47,8 @@ button:active {
 
 #animate {
     margin-top: 5vmin;
+    width: 20vmin;
+    height: 20vmin;
 }
 
 #main {
@@ -96,4 +102,11 @@ button:active {
     position: absolute;
     left: 0;
     top: 0;
+    width: 5vmin;
+    height: 5vmin;
+
+    background-image: url('./gfx/cursor.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
