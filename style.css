@@ -2,7 +2,7 @@ button {
     display: inline-block;
     margin: 0.5vw;
     padding: 1vh 2vw 1vh 2vw;
-    font-size: 1.8em;
+    font-size: 3vmin;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -10,10 +10,10 @@ button {
     color: #fff;
     background-color: #4CAF50;
     border: none;
-    border-radius: 2vh;
-    box-shadow: 0 9px #191;
+    border-radius: 2vmin;
+    box-shadow: 0 1vmin #171;
     height: 8vh;
-    text-shadow: rgba(0, 0, 0, 0.2) 1px 1px;
+    text-shadow: rgba(0, 0, 0, 0.2) 0.2vmin 0.2vmin;
 }
 
 button:hover {
@@ -22,7 +22,7 @@ button:hover {
 
 button:active {
     background-color: #3e8e41;
-    box-shadow: 0 5px #060;
+    box-shadow: 0 0.2vmin #060;
     transform: translateY(4px);
 }
 
@@ -34,35 +34,37 @@ button:active {
     margin-left: auto;
     margin-right: auto;
     width: 50vw;
-    padding-right: 2vw;
-    padding-left: 2vw;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding: 2vh 2vw;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 2vh;
 }
 
 #slider {
-    padding: 0;
-    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30vw;
+    height: 5vmin;
 }
 
-#slider > input {
+#slider input {
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 0;
-    margin: 0;
-    border-radius: 2vh;
-    width: 100%;
+    float: right;
+    border-radius: 2vmin;
+    width: 20vw;
+    height: 3vmin;
+
 }
 
-#slider > h2 {
+#slider label {
+    font-size: 3vmin;
+    line-height: 2.5vmin;
     text-shadow: rgba(0, 0, 0, 0.7) 2px 2px;
     color: white;
 }
 
 #animate {
     position: relative;
-    border: 1px;
-    width: 100px;
-    height: 100px;
+    border: none;
+    width: 10vmin;
+    height: 10vmin;
 }

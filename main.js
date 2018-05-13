@@ -31,7 +31,7 @@ window.onload = () => {
 	$(document).ready(function (e) {
 		let width = $(document).width();
 		let img = document.querySelector('#animate').children[0];
-		let imgwidth = img.clientWidth;
+		let imgwidth = img.clientWidth + 20;
 
 		width = width - imgwidth;
 
