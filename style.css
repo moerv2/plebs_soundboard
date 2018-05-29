@@ -21,8 +21,8 @@ body {
 
 button {
     margin: 0.5vw;
-    padding: 1vh 2vw 1vh 2vw;
-    font-size: 3vmin;
+    padding: 0.5vh 2vw 1vh 2vw;
+    font-size: 2.4vmin;
     text-align: center;
     text-decoration: none;
     outline: none;
@@ -31,7 +31,7 @@ button {
     border: none;
     border-radius: 2vmin;
     box-shadow: 0 1vmin #171;
-    height: 8vh;
+    height: 6vh;
     text-shadow: rgba(0, 0, 0, 0.2) 0.2vmin 0.2vmin;
 }
 
