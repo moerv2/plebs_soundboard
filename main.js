@@ -74,7 +74,7 @@ window.onload = () => {
 	function moveBackground() {
 		let body = document.body;
 		let offset = body.style.backgroundPositionY.replace('px', '');
-		if (offset < 168) {
+		if (offset < 400) {
 			offset++;
 		} else {
 			offset = 0;
